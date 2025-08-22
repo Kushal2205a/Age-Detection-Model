@@ -12,7 +12,7 @@ The model processes an input image to identify faces and overlays the predicted 
 
 | Original Image | Processed Image |
 | :---: | :---: |
-| ([Test Picture](https://github.com/Kushal2205a/Age-Detection-Model/blob/main/test_images/profile.webp))  | ([Processed Picture](https://github.com/Kushal2205a/Age-Detection-Model/blob/main/results/processed_profile.webp)) |
+| ([Test Picture](https://raw.githubusercontent.com/Kushal2205a/Age-Detection-Model/refs/heads/main/test_images/profile.webp)))  | ([Processed Picture](https://raw.githubusercontent.com/Kushal2205a/Age-Detection-Model/refs/heads/main/results/processed_profile.webp))) |
 
 ---
 
@@ -64,3 +64,4 @@ The age detection process is completed in two main stages:
 2.  **Age Prediction**: For each detected face, the Region of Interest (ROI) is extracted. This ROI is then converted into a blob and passed through the age prediction network. The network outputs a probability distribution over the predefined age buckets, and the bucket with the highest confidence is chosen as the predicted age range.
 
 Finally, the script draws a bounding box around each detected face and labels it with the predicted age range before saving the new image.
+
