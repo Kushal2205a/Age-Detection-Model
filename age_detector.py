@@ -1,4 +1,23 @@
 
+
+import sys
+import subprocess
+
+def install_and_import(package, pip_name=None):
+    try:
+        __import__(package)
+    except ImportError:
+        print(f"Installing missing package: {pip_name or package}")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", pip_name or package])
+        __import__(package)
+
+
+install_and_import("cv2", "opencv-python")
+install_and_import("numpy")
+install_and_import("pathlib")
+install_and_import("imutils")
+install_and_import("requests")
+
 import cv2
 import numpy as np
 import os
@@ -172,3 +191,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("Please check the Processed image in results/   , Thank you ")
